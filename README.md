@@ -1,4 +1,4 @@
-[Biografi ](https://rafifzharif.github.io/Rafif/Biografi/) <br>
-[Gambar Tabel ](https://rafifzharif.github.io/Rafif/GambarTabel/) <br>
-[Registrasi ](https://rafifzharif.github.io/Rafif/Registrasi/) <br>
+[Biografi ](https://rafifzharif.github.io/Rafif/Biodata/) <br>
+[Gambar Tabel ](https://rafifzharif.github.io/Rafif/Gambar/) <br>
+[Registrasi ](https://rafifzharif.github.io/Rafif/Register/) <br>
 [Login ](https://rafifzharif.github.io/Rafif/Login/)
