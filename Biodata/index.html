@@ -4,82 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FORM PENGISIAN BIODATA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+        }
+        td {
+            padding: 10px;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 <body>
-    <h2>Form Pengisian Biodata</h2>
-    
-    <form action="rafif_server" method="post">
-        <table border="0" cellpadding="10" cellspacing="0">
-            <tr>
-                <td><label for="nama">Nama:</label></td>
-                <td><input type="text" id="nama" name="nama" placeholder="Tuliskan Nama" required></td>
-            </tr>
-            <tr>
-                <td><label for="nim">NIM:</label></td>
-                <td><input type="text" id="nim" name="nim" placeholder="Tuliskan NIM" required></td>
-            </tr>
-            <tr>
-                <td><label for="email">Email:</label></td>
-                <td><input type="email" id="email" name="email" placeholder="Tuliskan Email" required></td>
-            </tr>
-            <tr>
-                <td><label for="password">Password:</label></td>
-                <td><input type="password" id="password" name="password" placeholder="Tuliskan Password" required></td>
-            </tr>
-            <tr>
-                <td>Jenis Kelamin:</td>
-                <td>
-                    <input type="radio" id="laki" name="jenis_kelamin" value="laki-laki">
-                    <label for="laki">Laki-laki</label>
-                    <input type="radio" id="perempuan" name="jenis_kelamin" value="perempuan">
-                    <label for="perempuan">Perempuan</label>
-                </td>
-            </tr>
-            <tr>
-                <td><label for="tanggallahir">Tanggal Lahir:</label></td>
-                <td><input type="date" id="tanggallahir" name="tanggallahir" required></td>
-            </tr>
-            <tr>
-                <td><label for="Alamat">Alamat:</label></td>
-                <td><textarea id="Alamat" name="Alamat" rows="4" cols="50" placeholder="Tuliskan Alamat" required></textarea></td>
-            </tr>
-            <tr>
-                <td><label for="prodi">Prodi:</label></td>
-                <td>
-                    <select id="prodi" name="prodi">
-                        <option value="rpl">RPL</option>
-                        <option value="tekkom">TEKKOM</option>
-                        <option value="pmm">PMM</option>
-                        <option value="pgsd">PGSD</option>
-                        <option value="pgpaud">PGPAUD</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>Hobi:</td>
-                <td>
-                    <input type="checkbox" id="hobi1" name="hobi" value="bermaingame">
-                    <label for="hobi1">Bermain Game</label><br>
-                    <input type="checkbox" id="hobi2" name="hobi" value="olahraga">
-                    <label for="hobi2">Olahraga</label><br>
-                    <input type="checkbox" id="hobi3" name="hobi" value="mendengarmusik">
-                    <label for="hobi3">Mendengar Musik</label><br>
-                </td>
-            </tr>
-            <tr>
-                <td><label for="warna">Warna Favorit:</label></td>
-                <td><input type="color" id="warna" name="warna"></td>
-            </tr>
-            <tr>
-                <td><label for="tautfile">Tautkan File:</label></td>
-                <td><input type="file" id="tautfile" name="tautfile"></td>
-            </tr>
-            <tr>
-                <td colspan="2" align="center">
-                    <input type="submit" value="Daftar">
-                </td>
-            </tr>
-        </table>
-    </form>
+    <div class="container">
+        <h2>Form Pengisian Biodata</h2>
+        <form action="rafif_server" method="post">
+            <table>
+                <tr>
+                    <td><label for="nama">Nama:</label></td>
+                    <td><input type="text" id="nama" name="nama" placeholder="Tuliskan Nama" required></td>
+                </tr>
+                <tr>
+                    <td><label for="nim">NIM:</label></td>
+                    <td><input type="text" id="nim" name="nim" placeholder="Tuliskan NIM" required></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" placeholder="Tuliskan Email" required></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                    <td><input type="password" id="password" name="password" placeholder="Tuliskan Password" required></td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin:</td>
+                    <td>
+                        <input type="radio" id="laki" name="jenis_kelamin" value="laki-laki">
+                        <label for="laki">Laki-laki</label>
+                        <input type="radio" id="perempuan" name="jenis_kelamin" value="perempuan">
+                        <label for="perempuan">Perempuan</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="tanggallahir">Tanggal Lahir:</label></td>
+                    <td><input type="date" id="tanggallahir" name="tanggallahir" required></td>
+                </tr>
+                <tr>
+                    <td><label for="Alamat">Alamat:</label></td>
+                    <td><textarea id="Alamat" name="Alamat" rows="4" placeholder="Tuliskan Alamat" required></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="prodi">Prodi:</label></td>
+                    <td>
+                        <select id="prodi" name="prodi">
+                            <option value="rpl">RPL</option>
+                            <option value="tekkom">TEKKOM</option>
+                            <option value="pmm">PMM</option>
+                            <option value="pgsd">PGSD</option>
+                            <option value="pgpaud">PGPAUD</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hobi:</td>
+                    <td>
+                        <input type="checkbox" id="hobi1" name="hobi" value="bermaingame">
+                        <label for="hobi1">Bermain Game</label><br>
+                        <input type="checkbox" id="hobi2" name="hobi" value="olahraga">
+                        <label for="hobi2">Olahraga</label><br>
+                        <input type="checkbox" id="hobi3" name="hobi" value="mendengarmusik">
+                        <label for="hobi3">Mendengar Musik</label><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="warna">Warna Favorit:</label></td>
+                    <td><input type="color" id="warna" name="warna"></td>
+                </tr>
+                <tr>
+                    <td><label for="tautfile">Tautkan File:</label></td>
+                    <td><input type="file" id="tautfile" name="tautfile"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Daftar">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
 </body>
 </html>
